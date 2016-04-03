@@ -48,6 +48,7 @@
      <Compile Include="Assets\C# Scripts\DestroyOnContact.cs" />
      <Compile Include="Assets\C# Scripts\GameDirector.cs" />
      <Compile Include="Assets\C# Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\C# Scripts\Score.cs" />
      <Compile Include="Assets\C# Scripts\testscript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

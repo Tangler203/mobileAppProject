@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameDirector : MonoBehaviour {
@@ -6,6 +7,9 @@ public class GameDirector : MonoBehaviour {
 	public Camera cam;
 	public GameObject asteroid;
 	private float maxWidth;
+	public GameObject gameOverText;
+	public GameObject scoreText;
+
 	private float minwait = 1;
 	private float maxwait = 2;
 
@@ -21,12 +25,19 @@ public class GameDirector : MonoBehaviour {
 	
 	}
 	
+	void FixedUpdate(){
+	
+	}
 
 	IEnumerator spawn(){
 		yield return new WaitForSeconds (2f);
-		while (true) {
+		while (GameObject.Find("Player") != null) {
 			Instantiate (asteroid, new Vector3 (Random.Range(-maxWidth,maxWidth), transform.position.y, 0), Quaternion.identity);
 			yield return new WaitForSeconds (Random.Range(minwait,maxwait));
 		}
+		scoreText.SetActive (false);
+		yield return new WaitForSeconds (2f);
+
+		gameOverText.SetActive (true);
 	}
 }
