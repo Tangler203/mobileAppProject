@@ -5,7 +5,7 @@ public class DestroyOnContact : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		Destroy (this.gameObject);
-		if(other.gameObject == GameObject.Find("Player")) {
+		if(other.gameObject == GameObject.Find("Player(Clone)")) {
 			Destroy (other.gameObject);
 		}
 	}

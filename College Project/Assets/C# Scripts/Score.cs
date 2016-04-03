@@ -12,7 +12,7 @@ public class Score : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		score = 0;
+		setScore ();
 		UpdateScore ();
 	}
 
@@ -23,7 +23,15 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void UpdateScore () {
-		scoreText.text = "Score: " + score;
-		gameOverText.text = "Game Over\nScore: " + score;
+		scoreText.text = "Score: " + getScore();
+		gameOverText.text = "Game Over\nScore: " + getScore ();
+	}
+
+	public void setScore(){
+		score = 0;
+	}
+
+	public int getScore(){
+		return score;
 	}
 }
