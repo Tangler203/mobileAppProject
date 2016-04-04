@@ -1,10 +1,18 @@
 fileFormatVersion: 2
 guid: c0c50ef3bc4a595448a7f8b4345af452
-timeCreated: 1459697360
+timeCreated: 1459765088
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cam: {instanceID: 0}
+  - asteroid: {fileID: 119634, guid: 9c6228daa9b2e18438991dbaecce7741, type: 2}
+  - player: {fileID: 166322, guid: 25780c65658702e4f933b4914a645646, type: 2}
+  - gameOverText: {instanceID: 0}
+  - resetButton: {instanceID: 0}
+  - startButton: {instanceID: 0}
+  - scoreScript: {instanceID: 0}
+  - scoreText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

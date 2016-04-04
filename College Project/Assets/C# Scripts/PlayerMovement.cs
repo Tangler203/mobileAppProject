@@ -5,10 +5,24 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float speed;
 	private Rigidbody2D rb2d;
+	private Vector2 touchOrigen = -Vector2.one;
 
 	void Start()
 	{
 		rb2d = GetComponent<Rigidbody2D> ();
+	}
+	void Update(){
+		if (Application.platform == RuntimePlatform.WSAPlayerX64) {
+			
+			foreach (Touch touch in Input.touches) {
+				Vector2 playertouch = touch.position;
+				if (touch.position.x < Screen.width / 2) {
+					rb2d.AddForce (Vector2.left * speed);
+				} else {
+					rb2d.AddForce (Vector2.left * speed);
+				}
+			}
+		}
 	}
 
 	void FixedUpdate()
